@@ -1,0 +1,19 @@
+<h1>New game</h1>
+<% @letters.each do |letter| %>
+  <ul>
+    <li>
+      <%= letter %>
+    </li>
+  </ul>
+<%end%>
+
+<hr>
+
+
+<form class="form-inline" action="/score" method="get">
+  <div class="form-group">
+    <label>What's the longest word you can find?</label>
+    <input class="form-control" type="text" name="try">
+    <input class="btn btn-primary" type="submit" value="Play">
+  </div>
+</form>
